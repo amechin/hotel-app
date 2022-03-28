@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création chambre{% endblock %}
+
+{% block body %}
+    <div class="uk-column-1-1 uk-flex uk-flex-right">
+        <a class="uk-button uk-button-default uk-margin" href="{{ path('app_room_index') }}">Retour</a>
+    </div>
+
+    <h1 class="uk-text-lighter uk-margin-top">Création chambre</h1>
+    {{ include('room/_form.html.twig') }}
+{% endblock %}

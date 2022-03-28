@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+<div class="uk-column-1-2 uk-margin">
+    <div>
+        {{ form_label(form.title)}}
+        {{ form_widget(form.title, {'attr': {'class': 'uk-input uk-margin uk-margin-remove-top'}}) }}
+    </div>
+    <div>
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description, {'attr': {'class': 'uk-input uk-margin uk-margin-remove-top'}}) }}
+    </div>
+    <div>
+        {{ form_label(form.price) }}
+        {{ form_widget(form.price, {'attr': {'class': 'uk-input uk-margin uk-margin-remove-top'}}) }}
+    </div>
+    <div>
+        {{ form_label(form.pict)}}
+        {{ form_widget(form.pict, {'attr': {'class': 'js-upload uk-margin uk-button uk-button-default'}}) }}
+    </div>
+</div>
+<div class="uk-column-1-1 uk-flex uk-flex-center uk-margin">
+    <button class="uk-button uk-button-default">{{ button_label|default('Enregistrer') }}</button>
+</div>
+{{ form_end(form) }}

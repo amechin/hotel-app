@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Room{% endblock %}
+
+{% block body %}
+
+    <div class="uk-column-1-2">
+        <img src="{{ asset('uploads/' ~ room.pict()) }}" width="1800" height="1200">
+        <table class="table uk-table uk-table-striped">
+            <tbody>
+            <tr>
+                <td class="uk-text-bolder uk-text-center uk-text-uppercase">{{ room.title }}</td>
+            </tr>
+            <tr>
+                <td class="uk-text-justify uk-height-small">{{ room.description }}</td>
+            </tr>
+            <tr>
+                <td class="uk-text-right uk-text-lighter">Tarif : {{ room.price }}€ / Nuit</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <a class="uk-button uk-button-default uk-margin" href="{{ path('app_room_index') }}">Retour</a>
+{% endblock %}
